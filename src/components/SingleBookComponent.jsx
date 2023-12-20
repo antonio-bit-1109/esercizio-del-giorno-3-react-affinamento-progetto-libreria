@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 
 const SingleBookComponent = (props) => {
     return (
-        <Col>
+        <Col xs={12} md={6} lg={4} className="my-2 p-3">
             <Card>
                 <Card.Img variant="top" src={props.book.img} />
                 <Card.Body>
