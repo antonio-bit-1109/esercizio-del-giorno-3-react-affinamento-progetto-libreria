@@ -5,12 +5,15 @@ import MyFooter from "./components/MyFooter";
 import Welcome from "./components/Welcome";
 import AllTheBooks from "./components/AllTheBooks";
 import FormComponent from "./components/FormComponent";
+import BookListComponent from "./components/BookListComponent";
+import SciFiBooks from "./data/scifi.json";
 
 function App() {
     return (
         <div className="App">
             <MyNav home="home" about="Abous Us" browse="Find Us" />
             <Welcome welcome="Benvenuto nella libreria super Top!" />
+            <BookListComponent books={SciFiBooks} />
             <FormComponent />
             <AllTheBooks />
             <MyFooter testo_par="questo è del testo passato tramite props" />
