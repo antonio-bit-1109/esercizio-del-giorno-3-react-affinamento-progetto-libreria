@@ -2,7 +2,7 @@ import Card from "react-bootstrap/Card";
 
 const SingleBookComponent = (props) => {
     return (
-        <Card>
+        <Card className="w-25">
             <Card.Img variant="top" src={props.book.img} className="w-25" />
             <Card.Body>
                 <Card.Title>{props.book.title}</Card.Title>
