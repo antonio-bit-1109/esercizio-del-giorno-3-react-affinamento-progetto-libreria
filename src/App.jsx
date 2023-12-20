@@ -21,12 +21,6 @@ const ListOfBooks = {
 };
 
 class App extends Component {
-    state = { selectedCategory: "fantasy" };
-
-    handleChangeCategory = (category) => {
-        this.setState({ selectedCategory: category });
-    };
-
     render() {
         return (
             <div className="App">
@@ -34,36 +28,11 @@ class App extends Component {
                 <Welcome welcome="Benvenuto nella libreria super Top!" />
                 {/* <AllTheBooks /> */}
                 <div className="text-center">
-                    <ButtonComponent
-                        theme="danger"
-                        Btncontent="Horror"
-                        margin="mx-1 my-3"
-                        onClick={() => this.handleChangeCategory("Horror")}
-                    />
-                    <ButtonComponent
-                        theme="info"
-                        Btncontent="Sci-Fi"
-                        margin="mx-1 my-3"
-                        onClick={() => this.handleChangeCategory("Sci-Fi")}
-                    />
-                    <ButtonComponent
-                        theme="warning"
-                        Btncontent="Romance"
-                        margin="mx-1 my-3"
-                        onClick={() => this.handleChangeCategory("Romance")}
-                    />
-                    <ButtonComponent
-                        theme="secondary"
-                        Btncontent="History"
-                        margin="mx-1 my-3"
-                        onClick={() => this.handleChangeCategory("History")}
-                    />
-                    <ButtonComponent
-                        theme="dark"
-                        Btncontent="Fantasy"
-                        margin="mx-1 my-3"
-                        onClick={() => this.handleChangeCategory("fantasy")}
-                    />
+                    <ButtonComponent theme="danger" Btncontent="Horror" margin="mx-1 my-3" />
+                    <ButtonComponent theme="info" Btncontent="Sci-Fi" margin="mx-1 my-3" />
+                    <ButtonComponent theme="warning" Btncontent="Romance" margin="mx-1 my-3" />
+                    <ButtonComponent theme="secondary" Btncontent="History" margin="mx-1 my-3" />
+                    <ButtonComponent theme="dark" Btncontent="Fantasy" margin="mx-1 my-3" />
                 </div>
 
                 <BookList ListOfBooks={ListOfBooks} />
