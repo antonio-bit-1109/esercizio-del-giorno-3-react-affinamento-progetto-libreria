@@ -1,6 +1,6 @@
 import { Component } from "react";
 import SingleBookComponent from "./SingleBookComponent";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 
 class BookListComponent extends Component {
     state = {
