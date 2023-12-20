@@ -1,5 +1,6 @@
 import { Component } from "react";
 import SingleBookComponent from "./SingleBookComponent";
+import { Col, Container, Row } from "react-bootstrap";
 
 class BookListComponent extends Component {
     state = {
@@ -18,12 +19,16 @@ class BookListComponent extends Component {
 
         return (
             <>
-                <label htmlFor="search"></label>
-
-                <input type="text" id="search" value={searchTerm} onChange={this.handleSearchChange} />
-                {filteredBooks.map((book, index) => (
-                    <SingleBookComponent key={index} book={book} />
-                ))}
+                <Container>
+                    <Row>
+                        {" "}
+                        <label htmlFor="search"></label>
+                        <input type="text" id="search" value={searchTerm} onChange={this.handleSearchChange} />
+                        {filteredBooks.map((book, index) => (
+                            <SingleBookComponent key={index} book={book} />
+                        ))}
+                    </Row>
+                </Container>
             </>
         );
     }
